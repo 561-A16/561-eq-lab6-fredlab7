@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+    - docker build -t webapp:test -f ./Dockerfile .
+    - docker run -it --rm -v $PWD/packages:/root/.nuget/packages webapp:test
