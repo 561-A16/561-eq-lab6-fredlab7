@@ -29,3 +29,8 @@
 - Configurer sur https://travis-ci.org/ un compte pour que TravisCI puisse exécuter le conteneur de tests.  
 - S'assurer que les tests passent sur TracisCI !
 
+## Commandes pratiques
+- docker build -t webapp:test -f ./Dockerfile .
+- docker run -it --rm -v $PWD/packages:/root/.nuget/packages webapp:test
+- docker run -it -p 5000:5000 webapp
+- docker run -p 127.0.0.1:5000:5000 -d webapp

@@ -1,9 +1,9 @@
-# FROM ymazieres/dotnet:compile
-FROM microsoft/dotnet
-COPY webapp /webapp
-RUN chmod +x /webapp/run_server.sh
+FROM ymazieres/dotnet:compile
+#FROM microsoft/dotnet
+COPY src /src
+RUN chmod +x /src/run.sh
 EXPOSE 5000
-ENTRYPOINT ["sh", "./run_server.sh"]
+ENTRYPOINT ["sh", "./run.sh"]
 ENV ASPNETCORE_URLS http://+:5000
-WORKDIR /webapp 
+WORKDIR /src
 
