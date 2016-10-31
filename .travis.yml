@@ -1,5 +1,11 @@
 sudo: required
 
+language: csharp
+
+branches:
+  only:
+  - master
+
 services:
   - docker
 
